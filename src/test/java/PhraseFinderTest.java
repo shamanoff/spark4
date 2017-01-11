@@ -1,4 +1,3 @@
-import countWords.config.RootConfig;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.junit.Assert;
@@ -8,13 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import phrases.PhraseFinder;
+import phrases.config.MainConfig;
 
 import java.util.Arrays;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = RootConfig.class)
+@ContextConfiguration(classes = MainConfig.class)
 public class PhraseFinderTest {
+
     @Autowired
     PhraseFinder pf;
 
